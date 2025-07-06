@@ -1,0 +1,119 @@
+/* Add Check-in Page CSS */
+
+/* Force user theme gradient background */
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    background-attachment: fixed !important;
+    min-height: 100vh !important;
+}
+
+.form-container {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 50px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    animation: fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.page-header h1 {
+    font-size: 32px;
+    color: #1f2937;
+    font-weight: 700;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.page-header h1 i {
+    color: #7c3aed;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #334155;
+    font-size: 16px;
+}
+
+.form-control,
+.form-select {
+    width: 100%;
+    padding: 14px 18px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+    outline: none;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+    gap: 20px;
+}
+
+.btn {
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-submit {
+    background-image: linear-gradient(to right, #28a745, #218838);
+    color: white;
+    border: none;
+}
+
+.btn-submit:hover {
+    box-shadow: 0 4px 15px rgba(40, 167, 69, 0.4);
+    transform: translateY(-2px);
+}
+
+.btn-cancel {
+    background-color: transparent;
+    border: 1px solid #9ca3af;
+    color: #4b5563;
+    text-decoration: none;
+}
+
+.btn-cancel:hover {
+    background-color: #f3f4f6;
+}

@@ -1,0 +1,149 @@
+/* Add Review Page CSS - FIXED */
+
+/* Force user theme gradient background */
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    background-attachment: fixed !important;
+    min-height: 100vh !important;
+}
+
+/* Form Container */
+.form-container {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 50px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    animation: fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Page Header */
+.page-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.page-header h1 {
+    font-size: 32px;
+    color: #1f2937;
+    font-weight: 700;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.page-header h1 i {
+    color: #7c3aed; /* Changed to purple theme color */
+}
+
+/* Form Group Styling */
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #334155;
+    font-size: 16px;
+}
+
+.form-control,
+.form-select {
+    width: 100%;
+    padding: 14px 18px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+    outline: none;
+}
+
+/* Star Rating */
+.star-rating {
+    display: flex;
+    flex-direction: row-reverse; /* Stars are displayed right-to-left */
+    justify-content: flex-end;
+    gap: 5px;
+}
+
+.star-rating input[type="radio"] {
+    display: none;
+}
+
+.star-rating label {
+    font-size: 3rem;
+    color: #e2e8f0;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    margin-bottom: 0; /* Override form-group label margin */
+}
+
+/* Star coloring on hover and selection */
+.star-rating input[type="radio"]:checked ~ label,
+.star-rating:hover input[type="radio"] ~ label:hover,
+.star-rating:hover input[type="radio"] ~ label:hover ~ label {
+    color: #f59e0b;
+}
+
+/* Submit and Back Buttons */
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+    gap: 20px;
+}
+
+.btn {
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-submit {
+    background-image: linear-gradient(to right, #10b981, #34d399);
+    color: white;
+    border: none;
+}
+
+.btn-submit:hover {
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);
+    transform: translateY(-2px);
+}
+
+.btn-back {
+    background-color: transparent;
+    border: 1px solid #9ca3af;
+    color: #4b5563;
+}
+
+.btn-back:hover {
+    background-color: #f3f4f6;
+}

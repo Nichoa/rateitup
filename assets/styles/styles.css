@@ -1,0 +1,425 @@
+/* Global CSS untuk Rate It Up */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* CSS Variables */
+:root {
+    --primary-color: #2563eb;
+    --secondary-color: #7c3aed;
+    --success-color: #10b981;
+    --danger-color: #ef4444;
+    --warning-color: #f59e0b;
+    --dark-color: #1f2937;
+    --light-color: #f3f4f6;
+    --white: #ffffff;
+    --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    color: var(--dark-color);
+    line-height: 1.6;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Navbar */
+nav {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: var(--shadow);
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between; /* Mendorong sisi kiri & kanan ke ujung */
+    align-items: center;
+}
+
+.nav-left, .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Jarak antar elemen */
+}
+
+nav a {
+    color: var(--dark-color);
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    white-space: nowrap; /* Mencegah teks turun baris */
+}
+
+nav a:hover {
+    background: rgba(37, 99, 235, 0.1);
+    color: var(--primary-color);
+}
+
+.nav-brand {
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--primary-color);
+}
+.nav-brand i {
+    margin-right: 5px;
+}
+.nav-brand:hover {
+    background: transparent !important;
+}
+
+.user-greeting {
+    color: var(--dark-color);
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+/* Mengatur ulang tombol logout agar lebih pas */
+.nav-right .btn-sm {
+    padding: 6px 16px;
+    font-size: 14px;
+}
+
+/* Cards */
+.card {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 25px;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Tables */
+table {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 16px;
+    text-align: left;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+td {
+    padding: 16px;
+    border-bottom: 1px solid var(--light-color);
+}
+
+tr:hover {
+    background: rgba(99, 102, 241, 0.05);
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+/* Forms */
+.form-group {
+    margin-bottom: 24px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--dark-color);
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="time"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid var(--light-color);
+    border-radius: 12px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.9);
+    font-family: 'Poppins', sans-serif;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(37, 99, 235, 0.1);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Alerts */
+.alert {
+    padding: 16px 20px;
+    margin-bottom: 24px;
+    border-radius: 12px;
+    font-weight: 500;
+}
+
+.alert-success {
+    background: linear-gradient(135deg, #d4edda, #c3e6cb);
+    color: #155724;
+    border: 1px solid #b8daff;
+}
+
+.alert-danger {
+    background: linear-gradient(135deg, #f8d7da, #f5c6cb);
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Badges */
+.badge {
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.badge-pending {
+    background: linear-gradient(135deg, #6c757d, #5a6268);
+    color: white;
+}
+
+.badge-approved {
+    background: linear-gradient(135deg, #28a745, #20c997);
+    color: white;
+}
+
+.badge-rejected {
+    background: linear-gradient(135deg, #dc3545, #c82333);
+    color: white;
+}
+
+.badge-primary {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+}
+
+/* Rating Stars */
+.rating {
+    color: #fbbf24;
+    font-size: 20px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Auth Container (Login/Register) */
+.auth-container {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    padding: 50px;
+    border-radius: 24px;
+    box-shadow: var(--shadow-lg);
+    width: 100%;
+    max-width: 450px;
+    margin: 100px auto;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.auth-container h2 {
+    margin-bottom: 40px;
+    text-align: center;
+    color: var(--dark-color);
+    font-size: 28px;
+    font-weight: 700;
+}
+
+/* Headers */
+h1 {
+    color: white;
+    margin-bottom: 30px;
+    font-size: 36px;
+    font-weight: 700;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: var(--dark-color);
+    margin: 30px 0 20px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+/* Footer */
+footer {
+    background: rgba(31, 41, 55, 0.95);
+    color: white;
+    text-align: center;
+    padding: 30px;
+    margin-top: 60px;
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Loading Animation */
+.loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--light-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    table {
+        font-size: 14px;
+    }
+    
+    th, td {
+        padding: 10px;
+    }
+    
+    .auth-container {
+        padding: 30px;
+        margin: 50px auto;
+    }
+    
+    h1 {
+        font-size: 28px;
+    }
+/* Penambahan untuk Navigasi Internal */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.nav-brand {
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--primary-color);
+}
+.nav-brand i {
+    margin-right: 5px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-user {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.user-greeting {
+    color: var(--dark-color);
+    font-weight: 500;
+}
+
+/* Mengganti nama .container menjadi .main-content untuk konten utama */
+.main-content {
+    padding-top: 20px;
+}
+
+/* Override untuk footer agar tidak terpengaruh */
+footer .container {
+    padding: 20px;
+}
+}
