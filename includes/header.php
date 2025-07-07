@@ -2,7 +2,7 @@
 <html lang="id">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-R">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rate It Up - Review Kuliner</title>
 
@@ -17,6 +17,10 @@
                 <div class="nav-left">
                     <a href="/rateitup/" class="nav-brand">
                         <i class="fas fa-utensils"></i> Rate It Up
+                    </a>
+
+                    <a href="/rateitup/public_reviews.php">
+                        <i class="fas fa-globe"></i> Halaman Publik
                     </a>
                     <?php if (isAdmin()): ?>
                         <a href="/rateitup/admin/dashboard.php">Dashboard Admin</a>

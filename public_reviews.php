@@ -57,9 +57,9 @@ $totalUsers = $stmt->fetch()['total'];
 
     <!-- Hero Section -->
     <section class="hero-section">
-        <h1 class="hero-title">Review Kuliner Indonesia</h1>
+        <h1 class="hero-title">Review Kuliner Nganjuk</h1>
         <p class="hero-subtitle">
-            Platform review tempat makan terpercaya di Indonesia.<br>
+            Platform review tempat makan terpercaya di Nganjuk.<br>
             Temukan tempat kuliner terbaik berdasarkan review dari pengguna!
         </p>
 
